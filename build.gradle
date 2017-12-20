@@ -1,0 +1,24 @@
+apply plugin: 'java'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile "junit:junit:3.8.1"
+	compile "com.google.zxing:core:2.2"
+	compile "com.google.zxing:javase:2.2"
+}
+
+jar {
+    baseName = 'QR_Code'
+    version =  '0.1.0'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}
+
+
+
